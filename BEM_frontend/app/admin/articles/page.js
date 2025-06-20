@@ -121,15 +121,15 @@ export default function AdminArticles() {
 
     return (
         <AdminLayout>
-            <div className="admin-articles">
+            <div className="admin-dashboard">
                 <div className="tf-container">
                     <div className="row">
                         <AdminSidebar />
                         
                         <div className="col-lg-9">
                             <div className="d-flex justify-content-between align-items-center mb-4">
-                                <h2>Articles</h2>
-                                <div className="d-flex">
+                                <h2 style={{ margin: 0, color: '#333' }}>Manage Articles</h2>
+                                <div className="d-flex align-items-center">
                                     {backendStatus !== 'checking' && (
                                         <div style={{ 
                                             padding: '0.25rem 0.5rem', 

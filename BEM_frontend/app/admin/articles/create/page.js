@@ -142,14 +142,14 @@ export default function CreateArticle() {
 
     return (
         <AdminLayout>
-            <div className="admin-create-article">
+            <div className="admin-dashboard">
                 <div className="tf-container">
                     <div className="row">
                         <AdminSidebar />
                         
                         <div className="col-lg-9">
                             <div className="d-flex justify-content-between align-items-center mb-4">
-                                <h2>Create New Article</h2>
+                                <h2 style={{ margin: 0, color: '#333' }}>Create New Article</h2>
                                 <Link href="/admin/articles" className="admin-btn admin-btn-outline-primary">
                                     <i className="fas fa-arrow-left"></i> Back to Articles
                                 </Link>
