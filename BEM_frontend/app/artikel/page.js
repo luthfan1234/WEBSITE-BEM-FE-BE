@@ -4,18 +4,9 @@ import Link from "next/link"
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import articlesApi from '@/services/articlesApi'
+import { getMinistryDisplayName, isArticleMatchingMinistry } from "@/utils/ministryTagsMapping"
 
-// Tag mapping for ministries
-const MINISTRY_TAGS = {
-    'kemahasiswaan': ['kemahasiswaan', 'advokasi', 'kesejahteraan', 'kreasi', 'potensi'],
-    'sosma': ['sosma', 'sosial', 'masyarakat', 'pengabdian', 'community'],
-    'kominfo': ['kominfo', 'komunikasi', 'informasi', 'media', 'publikasi', 'humas'],
-    'dalam_negeri': ['dalam_negeri', 'internal', 'organisasi', 'kaderisasi'],
-    'luar_negeri': ['luar_negeri', 'eksternal', 'kerjasama', 'partnership'],
-    'perekonomian': ['perekonomian', 'ekonomi', 'kewirausahaan', 'bisnis', 'umkm'],
-    'kesehatan': ['kesehatan', 'medis', 'hidup_sehat', 'olahraga', 'wellness'],
-    'pendidikan': ['pendidikan', 'akademik', 'pembelajaran', 'beasiswa', 'edukasi']
-};
+// Tag mapping for ministries is now handled by imported utility functions.
 
 export default function Artikel() {
     const searchParams = useSearchParams()
@@ -36,44 +27,7 @@ export default function Artikel() {
         fetchArticles()
     }, [currentPage, filters])
 
-    const getTagDisplayName = (tag) => {
-        // Convert tag to readable format
-        const tagMappings = {
-            'kemahasiswaan': 'Kemahasiswaan',
-            'sosma': 'Sosial Masyarakat',
-            'kominfo': 'Komunikasi & Informasi',
-            'dalam_negeri': 'Dalam Negeri',
-            'luar_negeri': 'Luar Negeri',
-            'perekonomian': 'Perekonomian',
-            'kesehatan': 'Kesehatan',
-            'pendidikan': 'Pendidikan'
-        };
-        return tagMappings[tag.toLowerCase()] || tag;
-    };
-
-    const isArticleMatchingTag = (article, searchTag) => {
-        if (!searchTag) return true;
-        
-        // Check if searchTag is a ministry tag
-        const ministryKey = Object.keys(MINISTRY_TAGS).find(key => 
-            key.toLowerCase() === searchTag.toLowerCase()
-        );
-        
-        if (ministryKey) {
-            // Check if article has any tags related to this ministry
-            const ministryTagList = MINISTRY_TAGS[ministryKey];
-            return article.tags?.some(articleTag => 
-                ministryTagList.some(ministryTag => 
-                    articleTag.toLowerCase().includes(ministryTag.toLowerCase())
-                )
-            );
-        } else {
-            // Direct tag matching
-            return article.tags?.some(tag => 
-                tag.toLowerCase().includes(searchTag.toLowerCase())
-            );
-        }
-    };
+    // getTagDisplayName and isArticleMatchingTag are now imported from a central utility file.
 
     const fetchArticles = async () => {
         try {
@@ -85,7 +39,7 @@ export default function Artikel() {
                 if (filters.category && article.category.toLowerCase() !== filters.category.toLowerCase()) {
                     return false
                 }
-                if (filters.tag && !isArticleMatchingTag(article, filters.tag)) {
+                if (filters.tag && !isArticleMatchingMinistry(article, filters.tag)) {
                     return false
                 }
                 if (filters.search) {
@@ -186,7 +140,7 @@ export default function Artikel() {
                                         <p>
                                             Menampilkan artikel untuk: 
                                             {filters.category && <span className="filter-tag">Kategori: {filters.category}</span>}
-                                            {filters.tag && <span className="filter-tag">Tag: {getTagDisplayName(filters.tag)}</span>}
+                                            {filters.tag && <span className="filter-tag">Tag: {getMinistryDisplayName(filters.tag)}</span>}
                                             {filters.search && <span className="filter-tag">Pencarian: "{filters.search}"</span>}
                                             <button onClick={clearFilters} className="btn-clear-filter">
                                                 <i className="fas fa-times"></i> Hapus Filter

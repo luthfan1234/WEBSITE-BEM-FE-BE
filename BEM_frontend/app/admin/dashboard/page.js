@@ -5,6 +5,7 @@ import Link from 'next/link';
 import AdminLayout from '@/components/layout/AdminLayout';
 import AdminSidebar from '@/components/admin/AdminSidebar';
 import articlesApi from '@/services/articlesApi';
+import { MINISTRY_TAGS, MINISTRY_DISPLAY_NAMES } from '@/utils/ministryTagsMapping';
 
 export default function AdminDashboard() {
     const [stats, setStats] = useState({
@@ -19,17 +20,7 @@ export default function AdminDashboard() {
     const [backendStatus, setBackendStatus] = useState('checking');
     const [error, setError] = useState(null);
 
-    // Ministry tags mapping for reference
-    const MINISTRY_TAGS = {
-        'kemahasiswaan': ['kemahasiswaan', 'advokasi', 'kesejahteraan', 'kreasi', 'potensi'],
-        'sosma': ['sosma', 'sosial', 'masyarakat', 'pengabdian', 'community'],
-        'kominfo': ['kominfo', 'komunikasi', 'informasi', 'media', 'publikasi', 'humas'],
-        'dalam_negeri': ['dalam_negeri', 'internal', 'organisasi', 'kaderisasi'],
-        'luar_negeri': ['luar_negeri', 'eksternal', 'kerjasama', 'partnership'],
-        'perekonomian': ['perekonomian', 'ekonomi', 'kewirausahaan', 'bisnis', 'umkm'],
-        'kesehatan': ['kesehatan', 'medis', 'hidup_sehat', 'olahraga', 'wellness'],
-        'pendidikan': ['pendidikan', 'akademik', 'pembelajaran', 'beasiswa', 'edukasi']
-    };
+    // Ministry tags mapping for reference is now imported from a central file.
 
     useEffect(() => {
         checkBackendConnection();
@@ -276,7 +267,7 @@ export default function AdminDashboard() {
                                             <div key={ministry} className="col-md-6 mb-3">
                                                 <div className="ministry-tags-info">
                                                     <h6 className="mb-2 text-primary">
-                                                        {ministry.replace('_', ' ').toUpperCase()}
+                                                        {MINISTRY_DISPLAY_NAMES[ministry]}
                                                     </h6>
                                                     <div className="tags-list">
                                                         {tags.map((tag, index) => (

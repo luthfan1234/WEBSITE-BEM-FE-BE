@@ -6,23 +6,14 @@ import { useSearchParams } from 'next/navigation';
 import AdminLayout from '@/components/layout/AdminLayout';
 import AdminSidebar from '@/components/admin/AdminSidebar';
 import articlesApi from '@/services/articlesApi';
+import { MINISTRY_TAGS, MINISTRY_DISPLAY_NAMES, isArticleMatchingMinistry } from '@/utils/ministryTagsMapping';
 
 export default function AdminArticles() {
     const searchParams = useSearchParams();
     const statusFilter = searchParams.get('status') || 'all';
     const tagFilter = searchParams.get('tag') || '';
     
-    // Ministry tags mapping
-    const MINISTRY_TAGS = {
-        'kemahasiswaan': ['kemahasiswaan', 'advokasi', 'kesejahteraan', 'kreasi', 'potensi'],
-        'sosma': ['sosma', 'sosial', 'masyarakat', 'pengabdian', 'community'],
-        'kominfo': ['kominfo', 'komunikasi', 'informasi', 'media', 'publikasi', 'humas'],
-        'dalam_negeri': ['dalam_negeri', 'internal', 'organisasi', 'kaderisasi'],
-        'luar_negeri': ['luar_negeri', 'eksternal', 'kerjasama', 'partnership'],
-        'perekonomian': ['perekonomian', 'ekonomi', 'kewirausahaan', 'bisnis', 'umkm'],
-        'kesehatan': ['kesehatan', 'medis', 'hidup_sehat', 'olahraga', 'wellness'],
-        'pendidikan': ['pendidikan', 'akademik', 'pembelajaran', 'beasiswa', 'edukasi']
-    };
+    // Ministry tags mapping is now imported from a central file.
 
     const [articles, setArticles] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -53,9 +44,7 @@ export default function AdminArticles() {
             }
             
             if (tagFilter) {
-                filteredArticles = filteredArticles.filter(article => 
-                    article.tags?.some(tag => tag.toLowerCase().includes(tagFilter.toLowerCase()))
-                );
+                filteredArticles = filteredArticles.filter(article => isArticleMatchingMinistry(article, tagFilter));
             }
             
             // Sort articles by newest first (based on id for simplicity)
@@ -204,7 +193,7 @@ export default function AdminArticles() {
                                                     <option value="">Filter by Ministry...</option>
                                                     {Object.keys(MINISTRY_TAGS).map(ministry => (
                                                         <option key={ministry} value={ministry}>
-                                                            {ministry.replace('_', ' ').toUpperCase()}
+                                                            {MINISTRY_DISPLAY_NAMES[ministry]}
                                                         </option>
                                                     ))}
                                                 </select>
@@ -212,7 +201,7 @@ export default function AdminArticles() {
                                             {tagFilter && (
                                                 <div className="col-md-6">
                                                     <small className="text-muted">
-                                                        Filtering by: <strong>{tagFilter.replace('_', ' ').toUpperCase()}</strong>
+                                                        Filtering by: <strong>{MINISTRY_DISPLAY_NAMES[tagFilter] || tagFilter}</strong>
                                                         <Link href="/admin/articles" className="ms-2 text-danger">
                                                             <i className="fas fa-times"></i> Clear
                                                         </Link>

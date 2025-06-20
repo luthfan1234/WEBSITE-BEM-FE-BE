@@ -8,6 +8,7 @@ import AdminLayout from '@/components/layout/AdminLayout';
 import AdminSidebar from '@/components/admin/AdminSidebar';
 import ImageUpload from '@/components/admin/ImageUpload';
 import articlesApi from '@/services/articlesApi';
+import { MINISTRY_TAGS, MINISTRY_DISPLAY_NAMES } from '@/utils/ministryTagsMapping';
 
 export default function CreateArticle() {
     const { isAuthenticated, isAdmin, isLoading } = useAuth();
@@ -31,17 +32,7 @@ export default function CreateArticle() {
     const [showTagSuggestions, setShowTagSuggestions] = useState(false);
     const router = useRouter();
 
-    // Ministry tags mapping
-    const MINISTRY_TAGS = {
-        'kemahasiswaan': ['kemahasiswaan', 'advokasi', 'kesejahteraan', 'kreasi', 'potensi'],
-        'sosma': ['sosma', 'sosial', 'masyarakat', 'pengabdian', 'community'],
-        'kominfo': ['kominfo', 'komunikasi', 'informasi', 'media', 'publikasi', 'humas'],
-        'dalam_negeri': ['dalam_negeri', 'internal', 'organisasi', 'kaderisasi'],
-        'luar_negeri': ['luar_negeri', 'eksternal', 'kerjasama', 'partnership'],
-        'perekonomian': ['perekonomian', 'ekonomi', 'kewirausahaan', 'bisnis', 'umkm'],
-        'kesehatan': ['kesehatan', 'medis', 'hidup_sehat', 'olahraga', 'wellness'],
-        'pendidikan': ['pendidikan', 'akademik', 'pembelajaran', 'beasiswa', 'edukasi']
-    };
+    // Ministry tags mapping is now imported from a central file.
 
     useEffect(() => {
         if (!isLoading && (!isAuthenticated || !isAdmin)) {
@@ -286,7 +277,7 @@ export default function CreateArticle() {
                                                                     onClick={() => handleAddMinistryTags(ministry)}
                                                                     disabled={isSubmitting}
                                                                 >
-                                                                    <i className="fas fa-plus"></i> {ministry.replace('_', ' ').toUpperCase()}
+                                                                    <i className="fas fa-plus"></i> {MINISTRY_DISPLAY_NAMES[ministry]}
                                                                 </button>
                                                                 <small className="text-muted">
                                                                     ({tags.join(', ')})
