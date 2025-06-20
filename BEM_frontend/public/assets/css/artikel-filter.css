@@ -1,0 +1,83 @@
+.filter-info {
+    background: #f8f9fa;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border-left: 4px solid #FBAD2D;
+}
+
+.filter-tag {
+    display: inline-block;
+    background: #FBAD2D;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 15px;
+    margin: 0 8px;
+    font-size: 0.875rem;
+}
+
+.btn-clear-filter {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 4px 12px;
+    border-radius: 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: background-color 0.3s;
+}
+
+.btn-clear-filter:hover {
+    background: #c82333;
+}
+
+.no-articles {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #FBAD2D;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.tf-pagination ul li button {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.tf-pagination ul li.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.error-message {
+    padding: 40px 20px;
+    text-align: center;
+}

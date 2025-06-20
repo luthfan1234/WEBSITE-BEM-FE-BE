@@ -1,0 +1,88 @@
+/* Article Image Styles with 16:9 Aspect Ratio */
+
+/* Main article image in article list (16:9 ratio) */
+.tf-blog-item .image img {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.tf-blog-item .image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Feature image on article detail page (16:9 ratio) */
+.detail-inner .image {
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.detail-inner .image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Previous/Next article thumbnails (16:9 ratio) */
+.post-navigator .thump {
+  width: 100px;
+  height: 56px; /* ~16:9 ratio */
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.post-navigator .thump img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Recent article thumbnails in sidebar (16:9 ratio) */
+.widget-recent-post .post-img {
+  width: 80px;
+  height: 45px; /* 16:9 ratio */
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.widget-recent-post .post-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Responsive adjustments while maintaining 16:9 ratio */
+@media (max-width: 768px) {
+  .post-navigator .thump {
+    width: 80px;
+    height: 45px; /* 16:9 ratio */
+  }
+}
+
+@media (max-width: 480px) {
+  .post-navigator .thump {
+    width: 60px;
+    height: 34px; /* ~16:9 ratio */
+  }
+}

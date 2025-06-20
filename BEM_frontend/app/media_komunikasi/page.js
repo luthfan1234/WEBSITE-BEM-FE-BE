@@ -1,0 +1,353 @@
+'use client';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import Layout from "@/components/layout/Layout";
+import Link from "next/link";
+import { useEffect, useState } from 'react';
+import articlesApi from '@/services/articlesApi';
+import { getArticlesByMinistry } from '@/utils/ministryTagsMapping';
+
+const swiperOptions = {
+    modules: [Autoplay, Pagination, Navigation],
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        clickable: true,
+        el: '.swiper-pagination-team',
+    },
+    navigation: {
+        nextEl: ".button-team-detail-next",
+        prevEl: ".button-team-detail-prev",
+    },
+};
+
+const coreTeamMembers = [
+    {
+        id: 1,
+        name: "Muhammad Fadhli Nur Luthfan",
+        position: "Menteri Media dan Komunikasi",
+        image: "/assets/images/medkom/1.png",
+        instagram: "https://www.instagram.com/fadhlinurluthfan",
+    },
+    {
+        id: 2,
+        name: "Fatya Hasgi",
+        position: "Dirjen Media Kreatif",
+        image: "/assets/images/medkom/2.png",
+        instagram: "https://www.instagram.com/fatyahasgi",
+    },
+    {
+        id: 3,
+        name: "Marlinda Windari",
+        position: "Dirjen Branding dan Desain",
+        image: "/assets/images/medkom/3.png",
+        instagram: "https://www.instagram.com/marlindawindari",
+    },
+];
+
+const staffData = [
+    {
+        title: "Kedirjenan Media Kreatif",
+        members: [
+            { name: "Namina Dyan Praditta", role: null },
+            { name: "Annan Saputra", role: null },
+            { name: "Ayesha Safwa Chacyrra", role: null },
+            { name: "Wakhid Samsi Mustaqin", role: null },
+            { name: "Restu Pramudya", role: null },
+            { name: "Cindy Amelia Putri", role: null },
+            { name: "Berlia Vieta Andira", role: null },
+        ],
+    },
+    {
+        title: "Kedirjenan Branding dan Desain",
+        members: [
+            { name: "Benny Kusuma Jati", role: null },
+            { name: "Laila Rahmawati", role: null },
+            { name: "Diana Amelia Putri", role: null },
+            { name: "Monika Kurniasih", role: null },
+            { name: "Abdullah Fauzan Khusnudhoni", role: null },
+            { name: "Marcellinus Bavo Putra Akvila", role: null },
+            { name: "Luna Aurellia Rusydiana", role: null },
+            { name: "Joezain Yuslamu'afa Sakhalish", role: null },
+        ],
+    },
+];
+
+export default function Team() {
+    const [relatedArticles, setRelatedArticles] = useState([]);
+    const [isLoadingArticles, setIsLoadingArticles] = useState(true);
+
+    useEffect(() => {
+        fetchMediaKomunikasiArticles();
+    }, []);
+
+    const fetchMediaKomunikasiArticles = async () => {
+        try {
+            setIsLoadingArticles(true);
+            const allArticles = await articlesApi.getArticles();
+            
+            // Filter articles by media komunikasi tags
+            const medkomArticles = getArticlesByMinistry(allArticles, 'media_komunikasi');
+            
+            // Get latest 3 articles
+            const latestArticles = medkomArticles
+                .sort((a, b) => new Date(b.date) - new Date(a.date))
+                .slice(0, 3);
+            
+            setRelatedArticles(latestArticles);
+        } catch (error) {
+            console.error('Error fetching media komunikasi articles:', error);
+            setRelatedArticles([]);
+        } finally {
+            setIsLoadingArticles(false);
+        }
+    };
+
+    return (
+        <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Media dan Komunikasi">
+            <div>
+                {/* Team Detail Section */}
+                <section className="tf-section tf-team-detail" style={{ paddingTop: '80px', paddingBottom: '80px' }}>
+                    <div className="tf-container">
+                        <div className="row">
+                            <div className="col-md-6">
+                                <div className="swiper-container team-details">
+                                    <Swiper {...swiperOptions} className="swiper-wrapper">
+                                        <SwiperSlide>
+                                            <div className="slider-item">
+                                                <img
+                                                    src="/assets/images/medkom/keg1.png"
+                                                    alt="Media dan Komunikasi BEM SV UNS"
+                                                    loading="lazy"
+                                                />
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className="slider-item">
+                                                <img
+                                                    src="/assets/images/medkom/keg2.png"
+                                                    alt="Tim Media dan Komunikasi"
+                                                    loading="lazy"
+                                                />
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className="slider-item">
+                                                <img
+                                                    src="/assets/images/medkom/keg3.png"
+                                                    alt="Kegiatan Media dan Komunikasi"
+                                                    loading="lazy"
+                                                />
+                                            </div>
+                                        </SwiperSlide>
+                                    </Swiper>
+                                    <div className="swiper-button-next button-team-detail-next"></div>
+                                    <div className="swiper-button-prev button-team-detail-prev"></div>
+                                    <div className="swiper-pagination swiper-pagination-team" style={{ marginBottom: '20px' }}></div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 d-flex">
+                                <div className="content-detail p-4 w-100 h-100 d-flex flex-column justify-content-between border rounded shadow-sm">
+                                    <div>
+                                        <p className="position text-uppercase text-muted mb-2">KEMENTERIAN</p>
+                                        <h1 className="name mb-3">MEDIA DAN KOMUNIKASI</h1>
+                                        <p className="description">
+                                            Kementerian Media dan Komunikasi BEM SV UNS bertugas mengelola seluruh aspek media, komunikasi, dan citra publik organisasi. Kementerian ini bertanggung jawab menyampaikan informasi dan mengembangkan branding BEM SV UNS melalui berbagai platform. Kementerian ini terdiri dari dua direktorat jenderal:
+                                        </p>
+                                        <ul className="list-style mt-3 mb-4">
+                                            <li>
+                                                <strong>Kedirjenan Media Kreatif:</strong>
+                                                <br />Bertugas mengembangkan konten-konten kreatif untuk media sosial dan platform digital BEM SV UNS, termasuk foto, video, dan pengelolaan media sosial.
+                                            </li>
+                                            <li>
+                                                <strong>Kedirjenan Branding dan Desain:</strong>
+                                                <br />Fokus pada pengembangan identitas visual, desain grafis untuk publikasi, dan strategi branding untuk memperkuat citra BEM SV UNS di kalangan mahasiswa dan masyarakat.
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                    <div>
+                                        <h3 className="title mb-2">Sosial Media</h3>
+                                        <ul className="social-item list-inline">
+                                            <li className="list-inline-item">
+                                                <Link
+                                                    href="https://www.instagram.com/medkombemsvuns"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    aria-label="Instagram Media dan Komunikasi BEM SV UNS"
+                                                >
+                                                    <i className="fab fa-instagram fa-lg" />
+                                                </Link>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section className="tf-section team" style={{ paddingTop: '100px', paddingBottom: '80px' }}>
+                    <div className="tf-container">
+                        <div className="row justify-content-center">
+                            <div className="col-md-12">
+                                <div className="tf-heading mb60">
+                                    <h2 className="heading">PENGURUS INTI MEDIA DAN KOMUNIKASI</h2>
+                                </div>
+                            </div>
+                            {coreTeamMembers.map((member) => (
+                                <div key={member.id} className="col-lg-3 col-md-4 col-sm-6 col-12 d-flex">
+                                    <div className="tf-team w-100 h-100 d-flex flex-column align-items-center justify-content-between border rounded shadow-sm">
+                                        <div className="image" style={{ width: '100%', height: 'auto', overflow: 'hidden' }}>
+                                            <img
+                                                src={member.image}
+                                                alt={`${member.name} - ${member.position}`}
+                                                loading="lazy"
+                                                style={{ width: '150px', height: '150px', objectFit: 'cover', border: '2px solid #fff', borderRadius: '50%' }}
+                                            />
+                                        </div>
+                                        <h3 className="name text-center mt-3">
+                                            <Link href="#" aria-label={`Profil ${member.name}`}>
+                                                {member.name}
+                                            </Link>
+                                        </h3>
+                                        <p className="position text-center">{member.position}</p>
+                                        <ul className="social list-inline mt-2 mb-3">
+                                            <li className="list-inline-item">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+                
+                <section className="tf-section" style={{ paddingTop: '80px', paddingBottom: '80px' }}>
+                    <div className="tf-container">
+                        <div className="row justify-content-center">
+                            <div className="col-md-12">
+                                <div className="tf-heading mb60">
+                                    <h2 className="heading">STAF KEMENTERIAN <span>MEDIA DAN KOMUNIKASI</span></h2>
+                                    <p className="sub-heading">Tim yang bertanggung jawab atas pengelolaan media, komunikasi, dan branding BEM SV UNS</p>
+                                </div>
+                            </div>
+                            <div className="col-12">
+                                <div className="tf-card-box h-100">
+                                    <div className="card-content">
+                                        <div className="row">
+                                            {staffData.map((bureau, index) => (
+                                                <div key={index} className="col-md-6 mb-4">
+                                                    <div className="staff-group border rounded p-4 shadow-sm">
+                                                        <h3 className="mb-3">{bureau.title}</h3>
+                                                        <ul className="staff-list list-unstyled">
+                                                            {bureau.members.map((member, memberIndex) => (
+                                                                <li key={memberIndex} className="d-flex align-items-center mb-2">
+                                                                    <i className="fas fa-user-circle text-primary" style={{ marginRight: '8px' }}></i>
+                                                                    {member.name}
+                                                                    {member.role && ` (${member.role})`}
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section className="tf-section" style={{ paddingTop: '80px', paddingBottom: '80px' }}>
+                    <div className="tf-container">
+                        <div className="row">
+                            <div className="col-md-12">
+                                <div className="tf-heading mb-5 text-center">
+                                    <h2 className="heading">ARTIKEL <span>TERKAIT</span></h2>
+                                </div>
+                            </div>
+                            <div className="col-md-12">
+                                {isLoadingArticles ? (
+                                    <div className="text-center">
+                                        <div className="loading-spinner">
+                                            <div className="spinner"></div>
+                                        </div>
+                                        <p>Memuat artikel...</p>
+                                    </div>
+                                ) : (
+                                    <>
+                                        <div className="row">
+                                            {relatedArticles.length > 0 ? (
+                                                relatedArticles.map((article) => (
+                                                    <div key={article.id} className="col-lg-4 col-md-6 mb-4">
+                                                        <article className="tf-blog-item">
+                                                            <div className="image">
+                                                                <Link href={`/artikel-detail?id=${article.id}`}>
+                                                                    <img
+                                                                        src={article.image}
+                                                                        alt={article.title}
+                                                                        loading="lazy"
+                                                                        onError={(e) => {
+                                                                            e.target.src = '/assets/images/blog/default-article.jpg'
+                                                                        }}
+                                                                    />
+                                                                </Link>
+                                                                <Link
+                                                                    href={`/artikel?category=${article.category}`}
+                                                                    className="category"
+                                                                >
+                                                                    {article.category}
+                                                                </Link>
+                                                            </div>
+                                                            <div className="meta">
+                                                                <span className="admin">{article.author}</span>
+                                                                <span className="date">{article.date}</span>
+                                                            </div>
+                                                            <h3 className="title">
+                                                                <Link href={`/artikel-detail?id=${article.id}`}>
+                                                                    {article.title}
+                                                                </Link>
+                                                            </h3>
+                                                            <p className="content">
+                                                                {article.excerpt && article.excerpt.length > 100 
+                                                                    ? `${article.excerpt.substring(0, 100)}...` 
+                                                                    : article.excerpt || 'Tidak ada ringkasan tersedia.'
+                                                                }
+                                                            </p>
+                                                            <Link
+                                                                href={`/artikel-detail?id=${article.id}`}
+                                                                className="btn-readmore"
+                                                            >
+                                                                BACA SELENGKAPNYA <i className="fal fa-long-arrow-right" />
+                                                            </Link>
+                                                        </article>
+                                                    </div>
+                                                ))
+                                            ) : (
+                                                <div className="col-md-12 text-center">
+                                                    <p>Belum ada artikel terkait media dan komunikasi.</p>
+                                                </div>
+                                            )}
+                                        </div>
+                                        <div className="text-center mt-4">
+                                            <Link href="/artikel" className="tf-button">
+                                                LIHAT SEMUA ARTIKEL
+                                            </Link>
+                                        </div>
+                                    </>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </Layout>
+    );
+}

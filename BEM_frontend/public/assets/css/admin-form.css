@@ -1,0 +1,96 @@
+.form-label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form-control, .form-select {
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 0.75rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #FBAD2D;
+    box-shadow: 0 0 0 0.2rem rgba(33, 231, 134, 0.25);
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    background: linear-gradient(135deg, #FBAD2D, #1ABC9C);
+    color: white;
+    border-radius: 12px 12px 0 0;
+    padding: 1.25rem 1.5rem;
+}
+
+.btn {
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #FBAD2D, #1ABC9C);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #1ABC9C, #FBAD2D);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(33, 231, 134, 0.3);
+}
+
+.btn-secondary {
+    background: #6c757d;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+    transform: translateY(-2px);
+}
+
+.alert {
+    border-radius: 8px;
+    border: none;
+}
+
+.list-group-item {
+    border: none;
+    padding: 0.75rem 0;
+}
+
+.list-group-item:not(:last-child) {
+    border-bottom: 1px solid #e9ecef;
+}
+
+.list-group-item a {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.list-group-item a:hover {
+    color: #FBAD2D;
+}
+
+/* Image upload styles */
+.form-control[type="file"] {
+    padding: 0.5rem;
+}
+
+.border.rounded {
+    border-radius: 8px !important;
+}
+
+/* Loading spinner */
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+}

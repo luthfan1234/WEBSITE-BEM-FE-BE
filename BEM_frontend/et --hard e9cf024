@@ -1,0 +1,12 @@
+[33mfe62e88[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: pull origin main --rebase (finish): returning to refs/heads/main
+[33mfe62e88[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{1}: pull origin main --rebase (start): checkout fe62e889024d18090d6d35c9435bdd9ed18c6a3f
+[33me9cf024[m HEAD@{2}: commit: update halaman dan tambah fitur admin
+[33md0a81d4[m HEAD@{3}: commit: fixx thema
+[33m89ba5f6[m HEAD@{4}: commit: fixx all
+[33m7ede127[m HEAD@{5}: commit: fixx relasi and kmh
+[33me629d20[m HEAD@{6}: pull origin main --rebase (finish): returning to refs/heads/main
+[33me629d20[m HEAD@{7}: pull origin main --rebase (pick): fixx menkab
+[33m1e8278e[m HEAD@{8}: pull origin main --rebase (start): checkout 1e8278e171f07ecd6eb92f197067f3239feaeda7
+[33m1ae7caa[m HEAD@{9}: commit: fixx menkab
+[33maa7972e[m HEAD@{10}: Branch: renamed refs/heads/master to refs/heads/main
+[33maa7972e[m HEAD@{12}: commit (initial): first commit
