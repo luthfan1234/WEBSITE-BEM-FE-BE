@@ -27,7 +27,8 @@ export default function Slider2() {
                                 <div className="tf-slider-item style-2">
                                     <div className="overlay"><img src="/assets/images/slider/slider2.png" alt="BEM SV UNS" /></div>
                                     <div className="content-inner">
-                                        <h1 className="heading">BEM SV UNS 2025</h1>
+                                        <h1 className="heading hidden sm:block">BEM SV UNS 2025</h1>
+                                        <h2 className="heading block sm:hidden">BEM SV UNS 2025</h2>
                                         <p className="sub-heading">Badan Eksekutif Mahasiswa Sekolah Vokasi Universitas Sebelas Maret</p>
                                     </div>
                                 </div>
@@ -38,7 +39,8 @@ export default function Slider2() {
                                 <div className="tf-slider-item style-2">
                                     <div className="overlay"><img src="/assets/images/slider/slider1.png" alt="BEM SV UNS" /></div>
                                     <div className="content-inner">
-                                        <h1 className="heading">SUARA MAHASISWA</h1>
+                                        <h1 className="heading hidden sm:block">SUARA MAHASISWA</h1>
+                                        <h2 className="heading block sm:hidden">SUARA MAHASISWA</h2>
                                         <p className="sub-heading">Menjadi Wadah Aspirasi dan Pengembangan Potensi Mahasiswa Sekolah Vokasi</p>
                                         <div className="btn-slider ">
                                         </div>
