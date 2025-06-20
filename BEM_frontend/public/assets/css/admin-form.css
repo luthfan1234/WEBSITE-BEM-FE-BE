@@ -13,7 +13,7 @@
 
 .form-control:focus, .form-select:focus {
     border-color: #FBAD2D;
-    box-shadow: 0 0 0 0.2rem rgba(33, 231, 134, 0.25);
+    box-shadow: 0 0 0 0.2rem #FBAD2D;
 }
 
 .card {
@@ -23,7 +23,7 @@
 }
 
 .card-header {
-    background: linear-gradient(135deg, #FBAD2D, #1ABC9C);
+    background: linear-gradient(135deg, #FBAD2D, #FBAD2D);
     color: white;
     border-radius: 12px 12px 0 0;
     padding: 1.25rem 1.5rem;
@@ -37,12 +37,12 @@
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #FBAD2D, #1ABC9C);
+    background: linear-gradient(135deg, #FBAD2D, #FBAD2D);
     border: none;
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #1ABC9C, #FBAD2D);
+    background: linear-gradient(135deg, #FBAD2D, #FBAD2D);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(33, 231, 134, 0.3);
 }
