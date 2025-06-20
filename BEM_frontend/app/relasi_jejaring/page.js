@@ -158,12 +158,19 @@ export default function Team() {
                                         <h2 className="tf-heading mb60" style={{textAlign: 'left'}}>RELASI DAN JEJARING</h2>
                                         <h2 className="title mb-2">Tentang</h2>
                                         <p className="description text-justify">
-                                            Kementerian Relasi dan Jejaring BEM SV UNS bertugas membangun dan memelihara hubungan serta kerjasama dengan berbagai pihak eksternal untuk mendukung program dan kegiatan BEM SV UNS. Kementerian ini terdiri dari dua direktorat jenderal:
+                                            Kementerian Relasi dan Jejaring bertugas menjalin dan menjaga hubungan sinergis dengan pihak internal maupun eksternal untuk mendukung kolaborasi dan perkembangan BEM SV UNS. Kementerian ini memiliki dua direktorat:
                                         </p>
                                         <ul className="list-style mt-3 mb-4">
-                                            <li><strong>Dirjen Hubungan dan Jaringan:</strong> Bertugas membangun relasi dan jaringan dengan berbagai stakeholder, termasuk pihak kampus, alumni, pemerintah, dan mitra eksternal lainnya.</li>
-                                            <li><strong>Dirjen Kolaborasi Mahasiswa:</strong> Fokus pada pengembangan kerjasama dan kolaborasi dengan organisasi mahasiswa baik internal maupun eksternal kampus untuk menciptakan sinergi dalam kegiatan kemahasiswaan.</li>
+                                        <li>
+                                            <strong>Dirjen Hubungan dan Jaringan:</strong><br />
+                                            Membangun dan menjaga relasi dengan organisasi eksternal, serta menjadi pintu komunikasi masuk ke BEM SV UNS.
+                                        </li>
+                                        <li>
+                                            <strong>Dirjen Kolaborasi Mahasiswa:</strong><br />
+                                            Menjadi jembatan antara BEM, fakultas, dan seluruh Ormawa SV UNS, serta mendorong kolaborasi dan pengembangan bersama.
+                                        </li>
                                         </ul>
+
                                     </div>
                                     <div>
                                         <h3 className="title mb-2">Sosial Media</h3>

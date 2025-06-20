@@ -170,9 +170,16 @@ export default function Team() {
                                                             Kementerian Kemahasiswaan BEM SV UNS bertugas memfasilitasi aspirasi, menyediakan advokasi, dan mengembangkan potensi mahasiswa Sekolah Vokasi UNS. Kementerian ini terdiri dari dua direktorat jenderal:
                                                         </p>
                                                         <ul className="list-style mt-3 mb-4">
-                                                            <li><strong>Kedirjenan Advokasi dan Kesejahteraan Mahasiswa:</strong> <br />Bertugas mewadahi dan memperjuangkan hak-hak mahasiswa serta mengupayakan peningkatan kesejahteraan mahasiswa Sekolah Vokasi UNS.</li>
-                                                            <li><strong>Kedirjenan Kreasi Karya dan Potensi Mahasiswa:</strong> <br />Fokus pada pengembangan minat, bakat, dan potensi mahasiswa melalui berbagai kegiatan kreasi dan kompetisi karya.</li>
+                                                        <li>
+                                                            <strong>Kedirjenan Advokasi dan Kesejahteraan Mahasiswa:</strong><br />
+                                                            Menjadi penghubung dan penyedia layanan advokasi guna menunjang kesejahteraan mahasiswa SV UNS.
+                                                        </li>
+                                                        <li>
+                                                            <strong>Kedirjenan Kreasi Karya dan Potensi Mahasiswa:</strong><br />
+                                                            Menggali, mendampingi, dan menyalurkan minat bakat mahasiswa dalam bidang akademik, olahraga, dan seni budaya.
+                                                        </li>
                                                         </ul>
+
                                                     </div>
                                                     <div>
                                                         <h3 className="title mb-2">Sosial Media</h3>

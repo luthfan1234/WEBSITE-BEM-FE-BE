@@ -160,15 +160,16 @@ export default function Team() {
                                             Kementerian Media dan Komunikasi BEM SV UNS bertugas mengelola seluruh aspek media, komunikasi, dan citra publik organisasi. Kementerian ini bertanggung jawab menyampaikan informasi dan mengembangkan branding BEM SV UNS melalui berbagai platform. Kementerian ini terdiri dari dua direktorat jenderal:
                                         </p>
                                         <ul className="list-style mt-3 mb-4">
-                                            <li>
-                                                <strong>Kedirjenan Media Kreatif:</strong>
-                                                <br />Bertugas mengembangkan konten-konten kreatif untuk media sosial dan platform digital BEM SV UNS, termasuk foto, video, dan pengelolaan media sosial.
-                                            </li>
-                                            <li>
-                                                <strong>Kedirjenan Branding dan Desain:</strong>
-                                                <br />Fokus pada pengembangan identitas visual, desain grafis untuk publikasi, dan strategi branding untuk memperkuat citra BEM SV UNS di kalangan mahasiswa dan masyarakat.
-                                            </li>
+                                        <li>
+                                            <strong>Kedirjenan Media Kreatif:</strong><br />
+                                            Mengelola media sosial BEM SV UNS sebagai portal informasi agenda, kajian, riset, dan kinerja organisasi.
+                                        </li>
+                                        <li>
+                                            <strong>Kedirjenan Branding dan Desain:</strong><br />
+                                            Membuat konten kreatif, inovatif, dan informatif untuk mendukung komunikasi dan branding BEM SV UNS.
+                                        </li>
                                         </ul>
+
 
                                     </div>
                                     <div>

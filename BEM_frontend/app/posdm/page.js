@@ -157,13 +157,20 @@ export default function Team() {
                                     <div>
                                         <p className="position text-uppercase text-muted mb-2">KEMENTERIAN</p>
                                         <h2 className="tf-heading mb60" style={{ textAlign: 'left' }}>PENGEMBANGAN ORGANISASI DAN SUMBER DAYA MANUSIA</h2>
-                                        <p className="description text-justify">
-                                            Kementerian Pengembangan Organisasi dan Sumber Daya Manusia (POSDM) bertugas mengembangkan kapasitas organisasi dan meningkatkan kualitas sumber daya manusia BEM SV UNS. Kementerian ini terdiri dari dua direktorat:
-                                        </p>
-                                        <ul className="list-style mt-3 mb-4">
-                                            <li><strong>Kedirjenan Pengembangan Organisasi:</strong> <br />Bertugas mengembangkan sistem dan struktur organisasi yang efektif serta efisien untuk mendukung kinerja BEM SV UNS.</li>
-                                            <li><strong>Kedirjenan Pengembangan SDM:</strong> <br />Fokus pada peningkatan kapasitas, kompetensi, dan kualitas pengurus BEM SV UNS melalui berbagai program pelatihan dan pengembangan.</li>
-                                        </ul>
+                                      <p className="description text-justify">
+                                        Kementerian ini bertugas mengembangkan potensi organisasi dan meningkatkan kapasitas kepemimpinan mahasiswa SV UNS melalui dua direktorat:
+                                    </p>
+                                    <ul className="list-style mt-3 mb-4">
+                                    <li>
+                                        <strong>Kedirjenan Pengembangan SDM:</strong><br />
+                                        Mengelola kaderisasi, meningkatkan kapasitas mahasiswa, dan mempersiapkan mereka menghadapi dunia pasca-kampus.
+                                    </li>
+                                    <li>
+                                        <strong>Kedirjenan Pengembangan Organisasi:</strong><br />
+                                        Meningkatkan soft dan hard skill anggota, menjaga keharmonisan internal, dan mengapresiasi kinerja pengurus BEM SV.
+                                    </li>
+                                    </ul>
+
                                     </div>
                                     <div>
                                         <h3 className="title mb-2">Sosial Media</h3>

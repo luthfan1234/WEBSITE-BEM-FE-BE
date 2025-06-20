@@ -158,12 +158,19 @@ export default function Team() {
                                         <p className="position text-uppercase text-muted mb-2">KEMENTERIAN</p>
                                         <h2 className="tf-heading mb60" style={{textAlign: 'left'}}>SOSIAL MASYARAKAT</h2>
                                         <p className="description text-justify">
-                                            Kementerian Sosial Masyarakat BEM SV UNS bertugas menjembatani hubungan antara kampus dengan masyarakat sekitar serta mengembangkan kepedulian sosial dan lingkungan di kalangan mahasiswa. Kementerian ini terdiri dari dua direktorat jenderal:
+                                            Kementerian Sosial Masyarakat adalah kementerian generasi kedua di BEM SV UNS yang fokus pada interaksi langsung dengan masyarakat dan kepedulian lingkungan. Kementerian ini terdiri dari dua direktorat:
                                         </p>
                                         <ul className="list-style mt-3 mb-4">
-                                            <li><strong>Kedirjenan Pengabdian dan Pemberdayaan Masyarakat:</strong> <br /> Bertugas mengembangkan program-program pengabdian dan pemberdayaan masyarakat sekitar kampus sebagai bentuk tanggung jawab sosial mahasiswa.</li>
-                                            <li><strong>Kedirjenan Sosial Lingkungan:</strong> <br /> Fokus pada pengembangan kesadaran dan kepedulian mahasiswa terhadap isu-isu sosial dan lingkungan hidup melalui berbagai kegiatan dan kampanye.</li>
+                                        <li>
+                                            <strong>Kedirjenan Pengabdian dan Pemberdayaan Masyarakat:</strong><br />
+                                            Berinteraksi langsung dengan masyarakat, khususnya Desa Anggrasmanis, melalui kegiatan edukasi, sosialisasi, dan inovasi pemberdayaan.
+                                        </li>
+                                        <li>
+                                            <strong>Kedirjenan Sosial Lingkungan:</strong><br />
+                                            Fokus pada pelestarian dan kepedulian lingkungan, baik di dalam maupun luar kampus, serta mendorong kontribusi mahasiswa dalam isu sosial dan lingkungan.
+                                        </li>
                                         </ul>
+
                                     </div>
                                     <div>
                                         <h3 className="title mb-2">Sosial Media</h3>

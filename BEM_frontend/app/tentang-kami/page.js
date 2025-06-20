@@ -105,7 +105,7 @@ export default function About() {
                                             <div className="p-4 bg-white rounded-3 shadow-sm h-100 wow fadeInUp">
                                                 <h4 className="mb-3 fw-semibold">Visi</h4>
                                                 <p className="mb-0 text-justify">
-                                                    Mewujudkan mahasiswa Sekolah Vokasi UNS yang aktif, progresif, dan berdaya saing melalui sinergi, inovasi, serta semangat pengabdian.
+                                                   Menjadikan BEM SV UNS sebagai organisasi yang profesional, inklusif, dan responsif, serta mampu berkontribusi secara nyata dalam pengembangan potensi mahasiswa dan kemajuan sivitas akademika dengan semangat kolaborasi dan inovasi.
                                                 </p>
                                             </div>
                                         </div>
@@ -115,11 +115,11 @@ export default function About() {
                                             <div className="p-4 bg-white rounded-3 shadow-sm h-100 wow fadeInUp" data-wow-delay="0.1s">
                                                 <h4 className="mb-3 fw-semibold">Misi</h4>
                                                 <ul className="mb-0 ps-3 text-justify" style={{ listStyleType: 'disc' }}>
-                                                    <li className="mb-2">Menyelenggarakan program kerja yang berdampak dan bermanfaat bagi mahasiswa maupun masyarakat.</li>
-                                                    <li className="mb-2">Menjadi wadah aspirasi mahasiswa Sekolah Vokasi UNS secara solutif dan responsif.</li>
-                                                    <li className="mb-2">Membangun sinergi yang baik dengan seluruh elemen kampus dan organisasi eksternal.</li>
-                                                    <li className="mb-2">Mendorong pengembangan soft skill dan hard skill mahasiswa melalui kegiatan edukatif, sosial, dan kepemudaan.</li>
-                                                    <li>Menginternalisasi nilai-nilai integritas, kolaborasi, dan profesionalitas dalam setiap kegiatan organisasi.</li>
+                                                    <li className="mb-2">- <strong>Ruang Sinergi:</strong> Menciptakan lingkungan kerja yang positif dengan asas kekeluargaan.</li>
+                                                    <li className="mb-2">- <strong>Ruang Advokasi:</strong> Memastikan kebijakan vokasi yang mendukung peningkatan kualitas pendidikan, fasilitas, dan pelayanan bagi mahasiswa KBM SV.</li>
+                                                    <li className="mb-2">- <strong>Ruang Koneksi:</strong> Meningkatkan komunikasi BEM SV yang efektif, baik internal maupun eksternal.</li>
+                                                    <li className="mb-2">- <strong>Ruang Kolaborasi:</strong> Menyalurkan pengembangan kreativitas dan minat bakat mahasiswa sesuai dengan kapasitas dan potensinya.</li>
+                                                    <li className="mb-2">- <strong>Ruang Pergerakan:</strong> Menjadi penggerak yang responsif dalam memperjuangkan kepentingan mahasiswa.</li>
                                                 </ul>
                                             </div>
                                         </div>
