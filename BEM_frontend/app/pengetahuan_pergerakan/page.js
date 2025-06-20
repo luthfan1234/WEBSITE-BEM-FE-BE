@@ -170,8 +170,8 @@ export default function Team() {
                                 <div className="content-detail p-4 w-100 h-100 d-flex flex-column justify-content-between border rounded shadow-sm">
                                     <div>
                                         <p className="position text-uppercase text-muted mb-2">KEMENTERIAN</p>
-                                        <h1 className="name mb-3">PENGETAHUAN DAN PERGERAKAN</h1>
-                                        <p className="description">
+                                        <h2 className="tf-heading mb60" style={{textAlign: 'left'}}>PENGETAHUAN DAN PERGERAKAN</h2>
+                                        <p className="description text-justify">
                                             Kementerian Pengetahuan dan Pergerakan BEM SV UNS bertugas memfasilitasi pengembangan wawasan dan mendorong aksi nyata mahasiswa dalam merespon isu-isu strategis. Kementerian ini terdiri dari tiga direktorat jenderal:
                                         </p>
                                         <ul className="list-disc list-inside mt-3 mb-4">

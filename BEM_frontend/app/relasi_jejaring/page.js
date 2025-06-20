@@ -155,9 +155,9 @@ export default function Team() {
                                 <div className="content-detail p-4 w-100 h-100 d-flex flex-column justify-content-between border rounded shadow-sm">
                                     <div>
                                         <p className="position text-uppercase text-muted mb-2">KEMENTERIAN</p>
-                                        <h1 className="name mb-3">RELASI DAN JEJARING</h1>
+                                        <h2 className="tf-heading mb60" style={{textAlign: 'left'}}>RELASI DAN JEJARING</h2>
                                         <h2 className="title mb-2">Tentang</h2>
-                                        <p className="description">
+                                        <p className="description text-justify">
                                             Kementerian Relasi dan Jejaring BEM SV UNS bertugas membangun dan memelihara hubungan serta kerjasama dengan berbagai pihak eksternal untuk mendukung program dan kegiatan BEM SV UNS. Kementerian ini terdiri dari dua direktorat jenderal:
                                         </p>
                                         <ul className="list-style mt-3 mb-4">

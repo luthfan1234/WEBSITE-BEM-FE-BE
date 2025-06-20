@@ -174,11 +174,11 @@ export default function Team() {
                                 <div className="content-detail p-4 w-100 h-100 d-flex flex-column justify-content-between border rounded shadow-sm">
                                     <div>
                                         <p className="position text-uppercase text-muted mb-2">KEMENTERIAN</p>
-                                        <h1 className="name mb-3">MANAJEMEN KABINET</h1>
-                                        <p className="description">
+                                        <h2 className="tf-heading mb60" style={{ textAlign: 'left' }}>MANAJEMEN KABINET</h2>
+                                        <p className="description text-justify">
                                             Kementerian Manajemen Kabinet bertugas mengelola administrasi, keuangan, dan kemandirian finansial BEM SV UNS. Kementerian ini terdiri dari tiga direktorat:
                                         </p>
-                                        <ul className="list-style mt-3 mb-4">
+                                        <ul className="list-style mt-3 mb-4 ">
                                             <li><strong>Kedirjenan Sekretaris Kabinet:</strong> <br />Mengatur dan mengawasi administrasi seluruh kementerian.</li>
                                             <li><strong>Kedirjenan Keuangan Kabinet:</strong> <br />Mengelola dan mengontrol keuangan organisasi.</li>
                                             <li><strong>Kedirjenan Ekonomi Kreatif:</strong> <br />Menjadi wadah pengembangan kewirausahaan mahasiswa serta mendorong kemandirian finansial BEM.</li>

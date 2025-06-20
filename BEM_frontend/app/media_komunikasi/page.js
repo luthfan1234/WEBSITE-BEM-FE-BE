@@ -155,8 +155,8 @@ export default function Team() {
                                 <div className="content-detail p-4 w-100 h-100 d-flex flex-column justify-content-between border rounded shadow-sm">
                                     <div>
                                         <p className="position text-uppercase text-muted mb-2">KEMENTERIAN</p>
-                                        <h1 className="name mb-3">MEDIA DAN KOMUNIKASI</h1>
-                                        <p className="description">
+                                        <h2 className="tf-heading mb60" style={{textAlign: 'left'}}>MEDIA DAN KOMUNIKASI</h2>
+                                        <p className="description text-justify">
                                             Kementerian Media dan Komunikasi BEM SV UNS bertugas mengelola seluruh aspek media, komunikasi, dan citra publik organisasi. Kementerian ini bertanggung jawab menyampaikan informasi dan mengembangkan branding BEM SV UNS melalui berbagai platform. Kementerian ini terdiri dari dua direktorat jenderal:
                                         </p>
                                         <ul className="list-style mt-3 mb-4">

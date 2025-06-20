@@ -156,8 +156,8 @@ export default function Team() {
                                 <div className="content-detail p-4 w-100 h-100 d-flex flex-column justify-content-between border rounded shadow-sm">
                                     <div>
                                         <p className="position text-uppercase text-muted mb-2">KEMENTERIAN</p>
-                                        <h1 className="name mb-3">PENGEMBANGAN ORGANISASI DAN SUMBER DAYA MANUSIA</h1>
-                                        <p className="description">
+                                        <h2 className="tf-heading mb60" style={{ textAlign: 'left' }}>PENGEMBANGAN ORGANISASI DAN SUMBER DAYA MANUSIA</h2>
+                                        <p className="description text-justify">
                                             Kementerian Pengembangan Organisasi dan Sumber Daya Manusia (POSDM) bertugas mengembangkan kapasitas organisasi dan meningkatkan kualitas sumber daya manusia BEM SV UNS. Kementerian ini terdiri dari dua direktorat:
                                         </p>
                                         <ul className="list-style mt-3 mb-4">
