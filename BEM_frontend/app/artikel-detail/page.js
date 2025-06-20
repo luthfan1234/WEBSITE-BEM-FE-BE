@@ -356,9 +356,9 @@ export default function ArtikelDetail() {
                                 </ul>
                                 
                                 {/* Comments Section */}
-                                <div id="comments">
-                                    <h3 className="heading">TINGGALKAN KOMENTAR</h3>
-                                    <div className="sub-heading">
+                                <div id="comments" >
+                                    <h3 className="tf-heading mb60">TINGGALKAN KOMENTAR</h3>
+                                    <div className="sub-heading text-justify mb24">
                                         Email Anda tidak akan dipublikasikan. Kolom yang wajib diisi ditandai dengan *
                                     </div>
 
