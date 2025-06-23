@@ -223,7 +223,13 @@ export default function AdminDashboard() {
                                     Recent Activity
                                 </div>
                                 {isLoadingStats ? (
-                                    <div className="admin-loading">
+                                    <div style={{
+                                        display: 'flex',
+                                        justifyContent: 'center',
+                                        alignItems: 'center',
+                                        minHeight: '200px',
+                                        width: '100%',
+                                    }}>
                                         <div className="admin-spinner"></div>
                                     </div>
                                 ) : (
