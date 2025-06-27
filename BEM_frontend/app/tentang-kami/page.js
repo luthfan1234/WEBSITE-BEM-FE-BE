@@ -55,11 +55,8 @@ export default function About() {
                             <div className="row align-items-center mb-5">
                                 <div className="col-lg-6 mb-4 mb-lg-0">
                                     <div className="tf-heading">
-                                        <p className="sub-heading wow fadeInUp text-justify mb-0">
-                                            Badan Eksekutif Mahasiswa Sekolah Vokasi Universitas Sebelas Maret (BEM SV UNS) adalah organisasi kemahasiswaan tertinggi di tingkat Sekolah Vokasi yang berperan sebagai lembaga eksekutif dalam menjalankan roda organisasi kemahasiswaan.
-                                        </p>
                                         <p className="sub-heading wow fadeInUp text-justify mb-0 mt-3">
-                                            BEM SV UNS berfungsi sebagai wadah pengembangan potensi mahasiswa baik dalam bidang akademik maupun non-akademik, serta menjadi penghubung antara mahasiswa dan pihak kampus dalam menyampaikan aspirasi.
+                                            Badan Eksekutif Mahasiswa Sekolah Vokasi Universitas Sebelas Maret (BEM SV UNS) merupakan organisasi mahasiswa di tingkat sekolah vokasi yang berfungsi sebagai lembaga eksekutif. BEM SV UNS menjadi wadah aspirasi, pengembangan minat dan bakat, serta pelaksana program kerja yang mendukung kemajuan mahasiswa Sekolah Vokasi UNS dalam bidang akademik maupun non-akademik.
                                         </p>
                                     </div>
                                 </div>

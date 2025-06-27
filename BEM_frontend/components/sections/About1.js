@@ -71,23 +71,23 @@ export default function About2() {
                                 {[
                                     {
                                         number: "01",
-                                        title: "Agent of Change",
-                                        desc: "Sebagai lembaga yang dinamika, BEM bertindak sebagai penggerak inovasi dan pembaruan, mendorong perubahan positif di lingkungan kampus dan masyarakat."
+                                        title: "Komunikatif",
+                                        desc: "Menjaga komunikasi yang terbuka, jelas, dan efektif dalam kepengurusan untuk menghindari missinformasi."
                                     },
                                     {
                                         number: "02",
-                                        title: "FASILITATOR ASPIRASI MAHASISWA",
-                                        desc: "BEM berperan sebagai jembatan antara mahasiswa dan pihak kampus, menyampaikan aspirasi dan kebutuhan mahasiswa untuk menciptakan lingkungan akademik yang lebih baik."
+                                        title: "Inovatif",
+                                        desc: "Meningkatkan kualitas sumber daya mahasiswa dengan mendukung kreatifitas pengembangan mahasiswa."
                                     },
                                     {
                                         number: "03",
-                                        title: "SINERGI ORGANISASI",
-                                        desc: "BEM mendorong kolaborasi antar organisasi mahasiswa untuk menciptakan sinergi dalam mencapai tujuan bersama, serta meningkatkan kualitas program kerja yang dihasilkan."
+                                        title: "Responsif",
+                                        desc: "Menyuarakan dan memperhatikan setiap aspirasi, kebutuhan, atau masalah dengan segera dan tepat."
                                     },
                                     {
                                         number: "04",
-                                        title: "PENGABDIAN MASYARAKAT",
-                                        desc: "BEM berkomitmen untuk melakukan pengabdian kepada masyarakat melalui berbagai program dan kegiatan yang bermanfaat, serta berkontribusi dalam menyelesaikan permasalahan sosial di lingkungan sekitar."
+                                        title: "Solutif",
+                                        desc: "Memberikan solusi yang konkret terhadap masalah yang ada dengan cara yang efektif."
                                     }
                                 ].map((item, index) => (
                                     <div key={index} className="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 d-flex">

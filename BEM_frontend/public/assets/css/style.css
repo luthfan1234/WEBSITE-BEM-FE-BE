@@ -1009,43 +1009,44 @@ a:focus {
 /* Root */
 :root {
     /* Primary BEM SV UNS Brand Colors */
-    --background-body: #F8FAFD; /* Soft white-blue background */
-    --primary-color: #24529D; /* Deep blue - matching logo */
-    --primary-color2: #0692ED; /* Bright blue - logo primary */
-    --primary-color3: #0F172A; /* Deep navy */
-    --primary-color4: #1E78D0; /* Professional blue */
-    --primary-color5: #FBAD2D; /* Vibrant orange - logo accent */
-    --primary-color6: #EFF6FF; /* Light blue tint */
-    --primary-color7: #FFFFFF; /* Pure white */
-    --primary-color8: #FFFFFF; /* Pure white */
-    --primary-color9: #ED8130; /* Deep orange accent */
-    --primary-color10: #DBEAFE; /* Soft blue background */
-    --primary-color11: #0F172A; /* Deep navy text */
-    --primary-color12: #FFFFFF; /* Pure white */
-    --primary-color13: #475569; /* Slate gray text */
-    --primary-color14: #24529D; /* Deep blue headers */
-    --primary-color15: #FFFFFF; /* Pure white */
-    --primary-color16: #CBD5E1; /* Blue-gray borders */
-    --primary-color17: rgba(6, 146, 237, 0.1); /* Blue wash */
-    --primary-color18: rgba(251, 173, 45, 0.12); /* Orange wash */
-    --primary-color19: #334155; /* Dark slate */
-    --primary-color20: #334155; /* Dark slate */
-    --primary-color21: #E2E8F0; /* Light slate */
-    --primary-color22: #F1F5F9; /* Very light slate */
-    --primary-color23: #FFFFFF; /* Pure white */
-    --primary-color24: rgba(6, 146, 237, 0.05); /* Subtle blue */
-    --primary-color25: rgba(6, 146, 237, 0.15); /* Medium blue */
-    --primary-color26: rgba(15, 23, 42, 0.05); /* Dark overlay */
-    --primary-color27: #24529D; /* Deep blue */
-    --primary-color28: rgba(51, 65, 85, 0.1); /* Slate overlay */
-    --primary-color29: rgba(6, 146, 237, 0.15); /* Blue overlay */
-    --primary-color30: rgba(51, 65, 85, 0.2); /* Medium slate overlay */
-    --primary-color31: #0692ED; /* Bright blue */
-    --primary-color32: #24529D; /* Deep blue */
-    --primary-color33: #475569; /* Slate gray */
-    --primary-color34: #94A3B8; /* Light slate */
-    --primary-color35: rgba(36, 82, 157, 0.06); /* Navy tint */
-    --primary-color36: rgba(15, 23, 42, 0.15); /* Dark overlay */
+     --background-body: #0C1222; /* Rich dark blue */
+    --primary-color: #E2E8F0; /* Light text */
+    --primary-color2: #45B1FF; /* Bright blue */
+    --primary-color3: #F8FAFC; /* Near white */
+    --primary-color4: #334155; /* Dark slate cards */
+    --primary-color5: #FFC456; /* Light orange for dark theme */
+    --primary-color6: #1E293B; /* Dark slate sections */
+    --primary-color7: #0C1222; /* Rich dark */
+    --primary-color8: #334155; /* Card background */
+    --primary-color9: #FBAD2D; /* Primary orange */
+    --primary-color10: #1E293B; /* Dark slate background */
+    --primary-color11: #FFC456; /* Light orange */
+    --primary-color12: #FFC456; /* Light orange */
+    --primary-color13: #F8FAFC; /* Light text */
+    --primary-color14: #F8FAFC; /* Light text */
+    --primary-color15: rgba(255, 255, 255, 0.05); /* Subtle white */
+    --primary-color16: #334155; /* Dark border */
+    --primary-color17: rgba(69, 177, 255, 0.1); /* Blue glow */
+    --primary-color18: rgba(255, 196, 86, 0.12); /* Orange glow */
+    --primary-color19: #94A3B8; /* Medium text */
+    --primary-color20: #F8FAFC; /* Light text */
+    --primary-color21: rgba(51, 65, 85, 0.6); /* Dark overlay */
+    --primary-color22: rgba(51, 65, 85, 0.8); /* Darker overlay */
+    --primary-color23: rgba(248, 250, 252, 0.03); /* Subtle white */
+    --primary-color24: rgba(248, 250, 252, 0.03); /* Subtle white */
+    --primary-color25: rgba(69, 177, 255, 0.1); /* Blue tint */
+    --primary-color26: rgba(69, 177, 255, 0.1); /* Blue tint */
+    --primary-color27: #E2E8F0; /* Light text */
+    --primary-color28: rgba(51, 65, 85, 0.8); /* Dark overlay */
+    --primary-color29: rgba(248, 250, 252, 0.15); /* Light overlay */
+    --primary-color30: #475569; /* Medium gray */
+    --primary-color31: #F8FAFC; /* Light */
+    --primary-color32: #F8FAFC; /* Light */
+    --primary-color33: #0692ED; /* Professional blue */
+    --primary-color34: #475569; /* Medium gray */
+    --primary-color35: rgba(51, 65, 85, 0.9); /* Strong overlay */
+    --primary-color36: rgba(248, 250, 252, 0.15); /* Light overlay */
+    
     
     /* Logo-Inspired Product Colors */
     --product-color16: #94A3B8; /* Light slate */
